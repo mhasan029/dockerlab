@@ -2,8 +2,7 @@ FROM centos:7
 MAINTAINER mhasan.sust@gmail.com
 RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
 RUN echo 'nameserver 8.8.4.4' >> /etc/resolv.conf
-RUN yum -y install initscripts && yum clean all
-RUN service network restart
+RUN /etc/init.d/network restart
 RUN yum update -y
 RUN yum install -y curl
 RUN yum install -y wget
