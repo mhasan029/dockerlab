@@ -1,5 +1,5 @@
-FROM centos:7
-MAINTAINER saifcse05@gmail.com
+FROM centos
+MAINTAINER mhasan.sust@gmail.com
 RUN yum update -y
 RUN yum install -y curl
 RUN yum install -y wget
