@@ -1,8 +1,7 @@
 FROM centos:7
 MAINTAINER mhasan.sust@gmail.com
-RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
-RUN echo 'nameserver 8.8.4.4' >> /etc/resolv.conf
-RUN systemctl restart network
+RUN echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+RUN sudo sysctl -p
 RUN yum update -y
 RUN yum install -y curl
 RUN yum install -y wget
