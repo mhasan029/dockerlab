@@ -1,6 +1,5 @@
-FROM centos:7
+FROM centos
 MAINTAINER mhasan.sust@gmail.com
-RUN sysctl -w net.ipv4.ip_forward=1
 RUN yum update -y
 RUN yum install -y curl
 RUN yum install -y wget
